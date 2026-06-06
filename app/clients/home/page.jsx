@@ -1,22 +1,18 @@
-
-import Link from 'next/link'
 import React from 'react'
-import Image from "next/image";
 
-// import Footer from '@/components/footer'
-import Navbar from './components/navbar'
-import Footer from './components/footer'
-import ScrollItems from './components/scrollItems';
-import Card from './components/product'
+import NavbarClient from '../../components/navbarClients'
+import ScrollItems from '../../components/scrollItems'
+import Footer from '../../components/footer'
+
 const page = () => {
   return (
     < >
       
    
-      <Navbar/>
+      <NavbarClient/>
   
-{/* this is the hero section made by khaoula */}
-    <section className="hero relative min-h-screen overflow-hidden " id=''>
+
+    <section className="relative min-h-screen overflow-hidden " id=''>
    
       {/* Background Image */}
       <div className="absolute inset-0">
@@ -40,12 +36,7 @@ const page = () => {
             </p>
 
             <div className="mt-10">
-              <Link
-                href="/contact"
-                className="inline-flex items-center rounded-full bg-white px-8 py-4 text-black font-medium transition hover:bg-gray-200"
-              >
-                Schedule a Visit
-              </Link>
+             
             </div>
           </div>
 
@@ -166,70 +157,21 @@ const page = () => {
     </div>
   </div>
 </section>
-        {/* <section className="relative flex  h-full overflow-hidden gap-15  pt-90 items-center justify-center">
+        <section className="relative flex  h-full overflow-hidden gap-15  pt-90 items-center justify-center">
         <div className='h-140 w-1/3 bg-gray-700 rounded-3xl ' ></div>
         <div className='h-140 w-1/2 bg-gray-700 rounded-3xl ' ></div>
        
         
           
-        </section> */}
-        
+        </section>
 
-        <section className="relative flex  h-full overflow-hidden gap-15 py-20 items-center justify-center">
+        <section className="relative flex  h-full overflow-hidden gap-15 py-90 items-center justify-center">
         <div className='h-140 w-1/2 bg-gray-700 rounded-3xl ' ></div>
         <div className='h-140 w-1/3 bg-gray-700 rounded-3xl ' ></div>
        
         
           
           </section>
-          <section id="faq" className="py-24 md:py-32 px-6 bg-cream">
-  <div className="mx-auto max-w-7xl grid md:grid-cols-2 gap-16 items-start">
-    <div className="md:sticky md:top-28">
-      <div className="flex items-center gap-4 text-black text-sm uppercase tracking-[0.25em] mb-6">
-        <span className="font-display text-2xl text-black">05</span>
-        <span>— FAQs</span>
-      </div>
-      <h2 className="font-display text-4xl md:text-5xl text-black leading-[1.05]">
-        Answers to your frequently asked questions.
-      </h2>
-      <div className="mt-10 aspect-[4/3] rounded-3xl overflow-hidden">
-        <img src="https://cdn.prod.website-files.com/68de9f894df3c35c556330f6/68e55299f8ee9ec8f840f483_faq-img.avif" className="w-full h-full object-cover"/>
-      </div>
-    </div>
-
-    <div className="divide-y divide-ink/10 border-y border-ink/10">
-     
-      <details className="group py-6">
-        <summary className="flex items-center justify-between cursor-pointer list-none">
-          <span className="font-display text-xl md:text-2xl text-black pr-6">Do you work with specific contractors or suppliers?</span>
-          <span className="chev font-display text-2xl text-black">+</span>
-        </summary>
-        <p className="mt-4 text-black/70">We offer a comprehensive range of services designed to meet your specific needs — architectural design, interior design, project management, and consultation.</p>
-      </details>
-      <details className="group py-6">
-        <summary className="flex items-center justify-between cursor-pointer list-none">
-          <span className="font-display text-xl md:text-2xl text-black pr-6">Do you carry out remote projects?</span>
-          <span className="chev font-display text-2xl text-black">+</span>
-        </summary>
-        <p className="mt-4 text-black/70">Yes — we collaborate with clients worldwide using detailed digital workflows, 3D previews, and on-site partners when needed.</p>
-      </details>
-      <details className="group py-6">
-        <summary className="flex items-center justify-between cursor-pointer list-none">
-          <span className="font-display text-xl md:text-2xl text-black pr-6">What is the payment process?</span>
-          <span className="chev font-display text-2xl text-black">+</span>
-        </summary>
-        <p className="mt-4 text-black/70">Payments are structured around defined milestones, with a clear contract outlining scope, deliverables, and timelines from day one.</p>
-      </details>
-      <details className="group py-6">
-        <summary className="flex items-center justify-between cursor-pointer list-none">
-          <span className="font-display text-xl md:text-2xl text-black pr-6">Do I need to hire an architect for my project?</span>
-          <span className="chev font-display text-2xl text-black">+</span>
-        </summary>
-        <p className="mt-4 text-black/70">It depends on the scope. We help you evaluate whether your project benefits from full architectural services or focused interior consulting.</p>
-      </details>
-    </div>
-  </div>
-</section>
   
     <Footer/>
     </>
