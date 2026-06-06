@@ -1,204 +1,123 @@
 import React from 'react'
-
+import NavbarClient from '@/app/components/navbarClients'
+import Footer from '@/app/components/footer'
+import Card from '@/app/components/product'
+import Link from 'next/link'
 const page = () => {
   return (
     <>
-       <main className="max-w-full  px-20 pb-24 text-black">
-        {/* Header */}
-        <div className="flex items-end justify-between flex-wrap gap-4 mb-10">
-          <div>
-            <p className="text-sm text-[#8a8780] uppercase tracking-widest">
-              Account
-            </p>
-            <h1 className="font-serif text-5xl md:text-6xl mt-2">
-              My Profile
+        <>
+    <NavbarClient/>
+   <section className="hero relative min-h-screen overflow-hidden " id=''>
+   
+      {/* Background Image */}
+      <div className="absolute inset-0">
+       
+      
+        </div>
+    
+
+      {/* Content */}
+      <div className="relative z-10 container mx-auto px-6 lg:px-12 min-h-screen flex items-end pb-16">
+        <div className="grid lg:grid-cols-2 gap-12 w-full items-end">
+          {/* Left Content */}
+          <div className="max-w-2xl">
+            <h1 className="text-5xl md:text-7xl font-bold text-black leading-tight tracking-tight">
+              A calmer way to care for your smile.
             </h1>
+
+            <p className="mt-6 text-lg md:text-xl text-black/80 max-w-xl">
+              Gentle dentistry designed to remove fear, build trust, and
+              deliver confident, lasting results.
+            </p>
+
+            <div className="mt-10">
+              <Link
+                href="/contact"
+                className="inline-flex items-center rounded-full bg-white px-8 py-4 text-black font-medium transition hover:bg-gray-200"
+              >
+                Schedule a Visit
+              </Link>
+            </div>
           </div>
 
-          <button className="px-6 py-3 rounded-full bg-[#0f0f10] text-white hover:bg-[#2a2a2c] transition">
-            Edit profile
-          </button>
-        </div>
+          {/* Right Content */}
+          <div className="flex flex-col lg:items-end gap-6">
+            {/* Testimonial Card */}
+            <div className="max-w-sm rounded-3xl border border-white/20 bg-white/10 backdrop-blur-xl p-6">
+             
 
-        <div className="grid lg:grid-cols-3 gap-6">
-          {/* LEFT */}
-          <section className="bg-white rounded-3xl p-8 lg:col-span-2 shadow-sm">
-            {/* Profile header */}
-            <div className="flex flex-col sm:flex-row gap-6 items-start sm:items-center pb-8 border-b border-[#f0eadf]">
-              <div className="relative">
-                <div className="w-28 h-28 rounded-full bg-gradient-to-br from-[#ece6dc] to-[#c9a772] flex items-center justify-center font-serif text-4xl">
-                  AM
-                </div>
-
-                <button className="absolute -bottom-1 -right-1 w-9 h-9 rounded-full bg-[#0f0f10] text-white text-sm">
-                  ✎
-                </button>
-              </div>
-
-              <div>
-                <h2 className="font-serif text-3xl">Amelia Morgan</h2>
-                <p className="text-[#8a8780] mt-1">
-                  Member since March 2023 · Gold tier
-                </p>
-
-                <div className="flex gap-2 mt-3">
-                  <span className="px-4 py-2 rounded-full border bg-white text-sm">
-                    Verified
-                  </span>
-                  <span className="px-4 py-2 rounded-full border bg-white text-sm">
-                    ⭐ 4.9
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            {/* Personal info */}
-            <h3 className="font-serif text-xl mt-8 mb-4">
-              Personal information
-            </h3>
-
-            <div className="grid sm:grid-cols-2 gap-5 text-sm">
-              <div>
-                <p className="text-[#8a8780] mb-1">Full name</p>
-                <p className="font-medium">Amelia Morgan</p>
-              </div>
-
-              <div>
-                <p className="text-[#8a8780] mb-1">Email</p>
-                <p className="font-medium">amelia@lume.studio</p>
-              </div>
-
-              <div>
-                <p className="text-[#8a8780] mb-1">Phone</p>
-                <p className="font-medium">+1 (415) 555 — 0184</p>
-              </div>
-
-              <div>
-                <p className="text-[#8a8780] mb-1">Address</p>
-                <p className="font-medium">221B Baker Street, London</p>
-              </div>
-            </div>
-
-            {/* Orders */}
-            <h3 className="font-serif text-xl mt-10 mb-4">Recent orders</h3>
-
-            <div className="space-y-1">
-              {[
-                {
-                  title: "Linen Throw — Sand",
-                  id: "#LM-1029",
-                  status: "Delivered",
-                  price: "$148",
-                  color: "#ece6dc",
-                },
-                {
-                  title: "Ceramic Vase Set",
-                  id: "#LM-1017",
-                  status: "In transit",
-                  price: "$92",
-                  color: "#d4cdbf",
-                },
-                {
-                  title: "Oak Side Table",
-                  id: "#LM-0998",
-                  status: "Delivered",
-                  price: "$420",
-                  color: "#bfb6a4",
-                },
-              ].map((o) => (
-                <div
-                  key={o.id}
-                  className="flex items-center justify-between py-4 border-b border-[#f0eadf]"
-                >
-                  <div className="flex items-center gap-4">
-                    <div
-                      className="w-12 h-12 rounded-xl"
-                      style={{ backgroundColor: o.color }}
-                    />
-                    <div>
-                      <p className="font-medium">{o.title}</p>
-                      <p className="text-xs text-[#8a8780]">
-                        {o.id} · {o.status}
-                      </p>
-                    </div>
-                  </div>
-
-                  <p className="font-medium">{o.price}</p>
-                </div>
-              ))}
-            </div>
-
-            <a
-              href="/orders"
-              className="text-sm underline mt-4 inline-block"
-            >
-              View all orders →
-            </a>
-          </section>
-
-          {/* RIGHT */}
-          <aside className="space-y-6">
-            {/* Stats */}
-            <div className="grid grid-cols-2 gap-4">
-              {[
-                { label: "Orders", value: "24" },
-                { label: "Spent", value: "$3.2k" },
-                { label: "Wishlist", value: "12" },
-                { label: "Points", value: "1.8k" },
-              ].map((s) => (
-                <div
-                  key={s.label}
-                  className="bg-white rounded-3xl p-5 shadow-sm"
-                >
-                  <p className="text-xs text-[#8a8780] uppercase tracking-widest">
-                    {s.label}
-                  </p>
-                  <p className="font-serif text-4xl mt-2">{s.value}</p>
-                </div>
-              ))}
-            </div>
-
-            {/* Shortcuts */}
-            <div className="bg-white rounded-3xl p-6 shadow-sm">
-              <h4 className="font-serif text-lg mb-4">
-                Account shortcuts
-              </h4>
-
-              {[
-                ["Addresses", "/addresses"],
-                ["Settings", "/settings"],
-                ["Notifications", "/notifications"],
-                ["Payment methods", "#"],
-              ].map(([label, href]) => (
-                <a
-                  key={label}
-                  href={href}
-                  className="flex justify-between py-3 text-sm border-b border-[#f0eadf] last:border-0"
-                >
-                  <span>{label}</span>
-                  <span>→</span>
-                </a>
-              ))}
-            </div>
-
-            {/* Security */}
-            <div className="bg-white rounded-3xl p-6 shadow-sm">
-              <h4 className="font-serif text-lg mb-2">Security</h4>
-              <p className="text-sm text-[#8a8780] mb-4">
-                Two-factor authentication active.
+              <p className="text-black text-lg">
+                “It felt more like a wellness visit than a dental appointment.”
               </p>
-              <button className="w-full px-6 py-3 rounded-full border border-[#ddd6c9] hover:bg-white">
-                Manage security
-              </button>
+
+              <p className="mt-3 text-black/70">— Sarah M.</p>
+
+             
             </div>
 
-            {/* Logout */}
-            <button className="w-full px-6 py-3 rounded-full border border-red-200 text-red-700 hover:bg-red-50">
-              Log out
-            </button>
-          </aside>
+            {/* Video Card */}
+                   </div>
         </div>
-      </main>
+      </div>
+    </section>
+          <section className="relative gap-5 py-10 items-center   justify-center h-full  overflow-hidden">
+      <div className='flex flex-wrap items-center justify-center my-30 text-black gap-10'>
+   
+{/* <select className="w-45 px-4 py-3 border  border-gray-300 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+  <option>Select a category</option>
+  <option>Electronics</option>
+  <option>Fashion</option>
+  <option>Sports</option>
+</select> */}
+
+<select className="w-45  px-4 py-3  focus:outline-none focus:ring-2 focus:ring-gray-500 rounded-3xl">
+  <option>Select a category</option>
+  <option>Electronics</option>
+  <option>Fashion</option>
+  <option>Sports</option>
+</select>
+<select className="w-45  px-4 py-3  focus:outline-none focus:ring-2 focus:ring-gray-500 rounded-3xl">
+  <option>Select a category</option>
+  <option>Electronics</option>
+  <option>Fashion</option>
+  <option>Sports</option>
+</select>
+<select className="w-45  px-4 py-3  focus:outline-none focus:ring-2 focus:ring-gray-500 rounded-3xl">
+  <option>Select a category</option>
+  <option>Electronics</option>
+  <option>Fashion</option>
+  <option>Sports</option>
+</select>
+<select className="w-45  px-4 py-3  focus:outline-none focus:ring-2 focus:ring-gray-500 rounded-3xl">
+  <option>Select a category</option>
+  <option>Electronics</option>
+  <option>Fashion</option>
+  <option>Sports</option>
+</select>
+
+
+      </div>
+
+      <div className='flex flex-wrap gap-5 items-center justify-center '>
+        <Card/>
+        <Card/>
+        <Card/>
+        <Card/>
+        <Card/>
+        <Card/>
+        <Card/>
+        <Card/>
+        <Card/>
+        <Card/>
+        <Card/>
+      </div>
+        
+     
+        </section>
+
+        <Footer/>
+    </>
     </>
   )
 }

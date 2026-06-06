@@ -105,7 +105,7 @@ const page = () => {
     <div className="mt-16 grid md:grid-cols-2 gap-8">
       <figure className="group">
         <div className="aspect-[4/5] overflow-hidden rounded-3xl bg-sand">
-          <img src="https://cdn.prod.website-files.com/68de9f894df3c35c556330f6/68e4823b54518067c4c909e1_about-img-01.avif" alt="" className="w-full h-full object-cover group-hover:scale-105 transition duration-700"/>
+          <img src="/images/img2.jpeg" alt="" className="w-full h-full object-cover group-hover:scale-105 transition duration-700"/>
         </div>
         <figcaption className="mt-4 flex justify-between text-sm text-black uppercase tracking-widest">
           <span>Luzen's 001</span><span>—</span>
@@ -113,7 +113,7 @@ const page = () => {
       </figure>
       <figure className="group md:mt-24">
         <div className="aspect-[4/5] overflow-hidden rounded-3xl bg-sand">
-          <img src="https://cdn.prod.website-files.com/68de9f894df3c35c556330f6/68e4823b6bc25cf2144acbfa_about-img-02.avif" alt="" className="w-full h-full object-cover group-hover:scale-105 transition duration-700"/>
+          <img src="/images/img1.jpeg" alt="" className="w-full h-full object-cover group-hover:scale-105 transition duration-700"/>
         </div>
         <figcaption className="mt-4 flex justify-between text-sm text-black uppercase tracking-widest">
           <span>Luzen's 002</span><span>—</span>
@@ -141,14 +141,14 @@ const page = () => {
         <img src="https://cdn.prod.website-files.com/68de9f894df3c35c556330f6/68e5405301886a216066c589_event-main-img.avif" className="w-full h-full object-cover"/>
       </div>
       <div className="md:col-span-2 grid sm:grid-cols-2 gap-6">
-        <article className="bg-cream rounded-3xl overflow-hidden">
+        <article className="bg-black rounded-3xl overflow-hidden">
           <img src="https://cdn.prod.website-files.com/68de9f894df3c35c556330f6/68e547017e3a4ee99da4637a_event-01.avif" className="w-full aspect-[4/3] object-cover"/>
           <div className="p-6">
             <div className="text-black text-xs uppercase tracking-widest">01 · Sep 15, 2024</div>
             <h3 className="font-display text-xl  mt-2">Present new objectives and new talents.</h3>
           </div>
         </article>
-        <article className="bg-cream rounded-3xl overflow-hidden">
+        <article className="bg-black rounded-3xl overflow-hidden">
           <img src="https://cdn.prod.website-files.com/68de9f894df3c35c556330f6/68e54701363b6dc9e71939b7_event-02.avif" className="w-full aspect-[4/3] object-cover"/>
           <div className="p-6">
             <div className="text-black text-xs uppercase tracking-widest">02 · Sep 15, 2024</div>
@@ -160,7 +160,7 @@ const page = () => {
             <div className="font-display text-3xl md:text-4xl leading-tight">Your idea · our expertise</div>
             <p className="text-black/60 mt-2 text-sm">Expert guidance and solutions for every project stage.</p>
           </div>
-          <a href="#contact" className="shrink-0 rounded-full bg-cream  px-5 py-3 text-sm">Explore Services →</a>
+          <a href="#contact" className="shrink-0 rounded-full bg-black  px-5 py-3 text-sm">Explore Services →</a>
         </div>
       </div>
     </div>
@@ -175,14 +175,37 @@ const page = () => {
         </section> */}
         
 
-        <section className="relative flex  h-full overflow-hidden gap-15 py-20 items-center justify-center">
-        <div className='h-140 w-1/2 bg-gray-700 rounded-3xl ' ></div>
-        <div className='h-140 w-1/3 bg-gray-700 rounded-3xl ' ></div>
+        <section className="relative flex  flex-wrap h-full overflow-hidden gap-15 py-20 items-center justify-center">
+        <div className='h-140 w-1/2 pb-10 '  >
+       <div className="space-y-10">
+        <div className="border-b border-black/15 pb-8">
+          <div className="font-display text-black text-6xl">250<span className="text-black">+</span></div>
+          <p className="text-black/60 mt-2 max-w-sm">We're proud to have the trust of 250 clients.</p>
+        </div>
+        <div className="border-b border-black/15 pb-8">
+          <div className="font-display text-black  text-6xl">90<span className="text-black">+</span></div>
+          <p className="text-black/60 mt-2 max-w-sm">We have completed over 90 projects in various sectors.</p>
+        </div>
+        <div className="border-b border-black/15 pb-8">
+          <div className="font-display text-black  text-6xl">500<span className="text-black">+</span></div>
+          <p className="text-black/60 mt-2 max-w-sm">100 architects and engineers focused on quality.</p>
+        </div>
+        <div>
+          <div className="font-display text-black  text-6xl">$5.5<span className="text-black">M</span></div>
+          <p className="text-black/60 mt-2 max-w-sm">We manage projects over $3M, showcasing our skill in design.</p>
+        </div>
+      </div>
+        
+        </div>
+        <div className='relative h-140 w-1/3 bg-gray-700 rounded-3xl ' >
+            <img src="/images/img1.jpeg" alt="" className="w-full h-full object-cover rounded-2xl  group-hover:scale-105 transition duration-700"/>
+      
+        </div>
        
         
           
           </section>
-          <section id="faq" className="py-24 md:py-32 px-6 bg-cream">
+          <section id="faq" className="py-24 md:py-32 px-6 ">
   <div className="mx-auto max-w-7xl grid md:grid-cols-2 gap-16 items-start">
     <div className="md:sticky md:top-28">
       <div className="flex items-center gap-4 text-black text-sm uppercase tracking-[0.25em] mb-6">
@@ -193,7 +216,7 @@ const page = () => {
         Answers to your frequently asked questions.
       </h2>
       <div className="mt-10 aspect-[4/3] rounded-3xl overflow-hidden">
-        <img src="https://cdn.prod.website-files.com/68de9f894df3c35c556330f6/68e55299f8ee9ec8f840f483_faq-img.avif" className="w-full h-full object-cover"/>
+        <img src="/images/img2.jpeg" className="w-full h-full object-cover"/>
       </div>
     </div>
 

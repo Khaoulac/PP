@@ -7,33 +7,35 @@ const page = () => {
   return (
     <>
     <Navbar/>
-    <section className="relative min-h-screen overflow-hidden  ">
+   <section className="hero relative min-h-screen overflow-hidden " id=''>
+   
       {/* Background Image */}
       <div className="absolute inset-0">
        
-        <div className="absolute inset-0 " />
-      </div>
+      
+        </div>
+    
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 lg:px-12 min-h-screen flex items-end pb-16">
         <div className="grid lg:grid-cols-2 gap-12 w-full items-end">
           {/* Left Content */}
           <div className="max-w-2xl">
-            <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight tracking-tight">
+            <h1 className="text-5xl md:text-7xl font-bold text-black leading-tight tracking-tight">
               A calmer way to care for your smile.
             </h1>
 
-            <p className="mt-6 text-lg md:text-xl text-white/80 max-w-xl">
+            <p className="mt-6 text-lg md:text-xl text-black/80 max-w-xl">
               Gentle dentistry designed to remove fear, build trust, and
               deliver confident, lasting results.
             </p>
 
             <div className="mt-10">
               <Link
-                href="/pages/usersChoses"
+                href="/contact"
                 className="inline-flex items-center rounded-full bg-white px-8 py-4 text-black font-medium transition hover:bg-gray-200"
               >
-                Design Your owen Product
+                Schedule a Visit
               </Link>
             </div>
           </div>
@@ -44,11 +46,11 @@ const page = () => {
             <div className="max-w-sm rounded-3xl border border-white/20 bg-white/10 backdrop-blur-xl p-6">
              
 
-              <p className="text-white text-lg">
+              <p className="text-black text-lg">
                 “It felt more like a wellness visit than a dental appointment.”
               </p>
 
-              <p className="mt-3 text-white/70">— Sarah M.</p>
+              <p className="mt-3 text-black/70">— Sarah M.</p>
 
              
             </div>
@@ -60,7 +62,7 @@ const page = () => {
     </section>
           <section className="relative gap-5 py-10 items-center   justify-center h-full  overflow-hidden">
       <div className='flex flex-wrap items-center justify-center my-30 text-black gap-10'>
-      <h1>Our Product </h1>
+   
 {/* <select className="w-45 px-4 py-3 border  border-gray-300 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-blue-500">
   <option>Select a category</option>
   <option>Electronics</option>

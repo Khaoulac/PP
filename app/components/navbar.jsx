@@ -83,10 +83,10 @@ const navbar = () => {
           <Link href="/pages/products" className="text-gray-800 hover:text-white transition">Products</Link>
           <Link href="/pages/services" className="text-gray-800 hover:text-white transition">Services</Link>
           <Link href="/#about" className="text-gray-800 hover:text-white transition">About Us</Link>
-          <Link href="#contact" className="text-gray-800 hover:text-white transition">Contact</Link>
+          <Link href="/#contact" className="text-gray-800 hover:text-white transition">Contact</Link>
     </nav>
     <div className='flex gap-5'>
-    <Link href="/pages/login" className="rounded-full bg-cream text-ink font-bold border-gray-500  text-black text-sm bg-blue-50  px-5 py-2.5 hover:bg-black hover:text-white transition">Sign In</Link>
+    <Link href="/pages/login" className="rounded-full bg-cream text-ink font-bold border-gray-500  text-black text-sm bg-white  px-5 py-2.5 hover:bg-black hover:text-white transition">Sign In</Link>
 
     <Link href="/pages/signin" className="rounded-full bg-cream text-ink font-bold  text-white text-sm bg-gray-950   px-5 py-2.5 hover:bg-white hover:text-black transition">Sign In</Link>
     </div>

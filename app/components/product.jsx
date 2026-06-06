@@ -11,23 +11,23 @@ const product = () => {
 
       {/* Main Image */}
       <img
-        src="/product/eye-cream-1.png"
+        src="/images/img1.jpeg"
         alt="Anti-aging Eye Cream"
-        className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-105 group-hover:opacity-0"
+        className="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-105
+         
+         "
       />
 
       {/* Hover Image */}
-      <img
+      {/* <img
         src="/product/eye-cream-2.jpg"
         alt="Anti-aging Eye Cream"
         className="absolute inset-0 w-full h-full object-cover opacity-0 scale-105 transition-all duration-700 group-hover:opacity-100 group-hover:scale-100"
-      />
+      /> */}
 
       {/* Badge */}
       <div className="absolute top-4 left-4 z-10">
-        <span className="px-3 py-1 text-xs font-medium rounded-full bg-white/90 backdrop-blur">
-          Best Seller
-        </span>
+       
       </div>
 
       {/* Add To Cart */}
