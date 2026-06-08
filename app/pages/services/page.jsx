@@ -6,7 +6,7 @@ const page = () => {
   return (
     <>
     <Navbar/>
-     <section className="hero relative min-h-screen  " id=''>
+     <section className="hero relative min-h-screen  ">
    
       {/* Background Image */}
       <div className="absolute inset-0">
@@ -60,18 +60,46 @@ const page = () => {
       </div>
     </section>
 
-    <section>
-      <h1 className='font-bold text-5xl text-center text-black pt-15'>Our Services </h1>
-    <div className='w-full h-screen flex  flex-wrap justify-center items-center gap-10  '>
-      <div className='w-1/4 min-w-100   h-3/5 bg-gray-600 rounded-2xl '>
+    <section >
+      <h1 className='font-bold text-5xl text-center text-black py-15'>Our Services </h1>
+    <div className='w-full h-screen min-h-fit flex  flex-wrap justify-center items-center gap-10  '>
+      
+      <div className="relative w-1/4 min-w-100   h-4/5  overflow-hidden rounded-2xl  hover:scale-110 transition-all cursor-pointer">
+     <img
+    src="/images/img2.jpeg"
+    alt="Product"
+    className="w-full h-full object-cover  "
+  />
+  <div className="absolute inset-x-0 bottom-0 h-50 bg-linear-to-t from-black/90 via-black/40 to-transparent"></div>
+  <h2 className="absolute bottom-6 left-6 text-white text-2xl font-bold">
+    Join us in our work Shop
+  </h2>
+</div>
+      <div className="relative w-1/4 min-w-100   h-4/5  overflow-hidden rounded-2xl  hover:scale-110 transition-all cursor-pointer">
+     <img
+    src="/images/img2.jpeg"
+    alt="Product"
+    className="w-full h-full object-cover  "
+  />
+  <div className="absolute inset-x-0 bottom-0 h-50 bg-linear-to-t from-black/90 via-black/40 to-transparent"></div>
+  <h2 className="absolute bottom-6 left-6 text-white text-2xl font-bold">
+    Join us in our work Shop
+  </h2>
+</div>
+      <div className="relative w-1/4 min-w-100   h-4/5  overflow-hidden rounded-2xl  hover:scale-110 transition-all cursor-pointer">
+     <img
+    src="/images/img2.jpeg"
+    alt="Product"
+    className="w-full h-full object-cover  "
+  />
+  <div className="absolute inset-x-0 bottom-0 h-50 bg-linear-to-t from-black/90 via-black/40 to-transparent"></div>
+  <h2 className="absolute bottom-6 left-6 text-white text-2xl font-bold">
+    Join us in our work Shop
+  </h2>
+</div>
 
-      </div>
-      <div className='w-1/4 min-w-100 h-3/5 bg-gray-600 rounded-2xl'>
-
-      </div>
-      <div className='w-1/4 min-w-100 h-3/5 bg-gray-600 rounded-2xl'>
-
-      </div>
+   
+     
       
      
     </div>

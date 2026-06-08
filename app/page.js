@@ -154,14 +154,14 @@ const page = () => {
 
     <div className="mt-16 grid md:grid-cols-3 gap-6">
       <div className='flex justify-center '>
-      <div id='box' className="box md:row-span-2 aspect-[3/4] md:aspect-auto rounded-3xl overflow-hidden">
+      <div id='box' className="box md:row-span-2  aspect-3/4 md:aspect-auto rounded-3xl overflow-hidden">
         <img src="https://cdn.prod.website-files.com/68de9f894df3c35c556330f6/68e5405301886a216066c589_event-main-img.avif" className="w-full h-full object-cover"/>
       </div>
       </div>
       <div className="md:col-span-2 grid sm:grid-cols-2 gap-6">
         <article id='box' className="  bg-black rounded-3xl overflow-hidden">
           <div className='flex justify-center items-center'>
-          <img src="https://cdn.prod.website-files.com/68de9f894df3c35c556330f6/68e547017e3a4ee99da4637a_event-01.avif" className="w-full aspect-[4/3] object-cover"/>
+          <img src="https://cdn.prod.website-files.com/68de9f894df3c35c556330f6/68e547017e3a4ee99da4637a_event-01.avif" className="w-full aspect-4/3 object-cover"/>
           </div>
           <div className="p-6">
             <div className="text-black text-xs uppercase tracking-widest">01 · Sep 15, 2024</div>
@@ -171,7 +171,7 @@ const page = () => {
         
         <article id='box' className=" bg-black rounded-3xl overflow-hidden">
              <div className='flex justify-center items-center'>
-          <img src="https://cdn.prod.website-files.com/68de9f894df3c35c556330f6/68e54701363b6dc9e71939b7_event-02.avif" className="w-full aspect-[4/3] object-cover"/>
+          <img src="https://cdn.prod.website-files.com/68de9f894df3c35c556330f6/68e54701363b6dc9e71939b7_event-02.avif" className="w-full aspect-4/3 object-cover"/>
           </div>
           <div className="p-6">
             <div className="text-black text-xs uppercase tracking-widest">02 · Sep 15, 2024</div>
