@@ -1,210 +1,4 @@
-// import React from 'react'
-// import Navbar from '../../components/navbar'
-// const page = () => {
-//   return (
-//     <>
-//     <Navbar/>
-//      <main className="max-w-full  px-20 pb-24 pt-20 text-black ">
-//         {/* Header */}
-//         <div className="flex items-end justify-between flex-wrap gap-4 mb-10">
-//           <div>
-//             <p className="text-sm text-[#8a8780] uppercase tracking-widest">
-//               Account
-//             </p>
-//             <h1 className="font-serif text-5xl md:text-6xl mt-2">
-//               My Profile
-//             </h1>
-//           </div>
 
-//           <button className="px-6 py-3 rounded-full bg-[#0f0f10] text-white hover:bg-[#2a2a2c] transition">
-//             Edit profile
-//           </button>
-//         </div>
-
-//         <div className="grid lg:grid-cols-3 gap-6">
-//           {/* LEFT */}
-//           <section className="bg-white rounded-3xl p-8 lg:col-span-2 shadow-sm">
-//             {/* Profile header */}
-//             <div className="flex flex-col sm:flex-row gap-6 items-start sm:items-center pb-8 border-b border-[#f0eadf]">
-//               <div className="relative">
-//                 <div className="w-28 h-28 rounded-full bg-gradient-to-br from-[#ece6dc] to-[#c9a772] flex items-center justify-center font-serif text-4xl">
-//                   AM
-//                 </div>
-
-//                 <button className="absolute -bottom-1 -right-1 w-9 h-9 rounded-full bg-[#0f0f10] text-white text-sm">
-//                   ✎
-//                 </button>
-//               </div>
-
-//               <div>
-//                 <h2 className="font-serif text-3xl">Amelia Morgan</h2>
-//                 <p className="text-[#8a8780] mt-1">
-//                   Member since March 2023 · Gold tier
-//                 </p>
-
-//                 <div className="flex gap-2 mt-3">
-//                   <span className="px-4 py-2 rounded-full border bg-white text-sm">
-//                     Verified
-//                   </span>
-//                   <span className="px-4 py-2 rounded-full border bg-white text-sm">
-//                     ⭐ 4.9
-//                   </span>
-//                 </div>
-//               </div>
-//             </div>
-
-//             {/* Personal info */}
-//             <h3 className="font-serif text-xl mt-8 mb-4">
-//               Personal information
-//             </h3>
-
-//             <div className="grid sm:grid-cols-2 gap-5 text-sm">
-//               <div>
-//                 <p className="text-[#8a8780] mb-1">Full name</p>
-//                 <p className="font-medium">Amelia Morgan</p>
-//               </div>
-
-//               <div>
-//                 <p className="text-[#8a8780] mb-1">Email</p>
-//                 <p className="font-medium">amelia@lume.studio</p>
-//               </div>
-
-//               <div>
-//                 <p className="text-[#8a8780] mb-1">Phone</p>
-//                 <p className="font-medium">+1 (415) 555 — 0184</p>
-//               </div>
-
-//               <div>
-//                 <p className="text-[#8a8780] mb-1">Address</p>
-//                 <p className="font-medium">221B Baker Street, London</p>
-//               </div>
-//             </div>
-
-//             {/* Orders */}
-//             <h3 className="font-serif text-xl mt-10 mb-4">Recent orders</h3>
-
-//             <div className="space-y-1">
-//               {[
-//                 {
-//                   title: "Linen Throw — Sand",
-//                   id: "#LM-1029",
-//                   status: "Delivered",
-//                   price: "$148",
-//                   color: "#ece6dc",
-//                 },
-//                 {
-//                   title: "Ceramic Vase Set",
-//                   id: "#LM-1017",
-//                   status: "In transit",
-//                   price: "$92",
-//                   color: "#d4cdbf",
-//                 },
-//                 {
-//                   title: "Oak Side Table",
-//                   id: "#LM-0998",
-//                   status: "Delivered",
-//                   price: "$420",
-//                   color: "#bfb6a4",
-//                 },
-//               ].map((o) => (
-//                 <div
-//                   key={o.id}
-//                   className="flex items-center justify-between py-4 border-b border-[#f0eadf]"
-//                 >
-//                   <div className="flex items-center gap-4">
-//                     <div
-//                       className="w-12 h-12 rounded-xl"
-//                       style={{ backgroundColor: o.color }}
-//                     />
-//                     <div>
-//                       <p className="font-medium">{o.title}</p>
-//                       <p className="text-xs text-[#8a8780]">
-//                         {o.id} · {o.status}
-//                       </p>
-//                     </div>
-//                   </div>
-
-//                   <p className="font-medium">{o.price}</p>
-//                 </div>
-//               ))}
-//             </div>
-
-//             <a
-//               href="/orders"
-//               className="text-sm underline mt-4 inline-block"
-//             >
-//               View all orders →
-//             </a>
-//           </section>
-
-//           {/* RIGHT */}
-//           <aside className="space-y-6">
-//             {/* Stats */}
-//             <div className="grid grid-cols-2 gap-4">
-//               {[
-//                 { label: "Orders", value: "24" },
-//                 { label: "Spent", value: "$3.2k" },
-//                 { label: "Wishlist", value: "12" },
-//                 { label: "Points", value: "1.8k" },
-//               ].map((s) => (
-//                 <div
-//                   key={s.label}
-//                   className="bg-white rounded-3xl p-5 shadow-sm"
-//                 >
-//                   <p className="text-xs text-[#8a8780] uppercase tracking-widest">
-//                     {s.label}
-//                   </p>
-//                   <p className="font-serif text-4xl mt-2">{s.value}</p>
-//                 </div>
-//               ))}
-//             </div>
-
-//             {/* Shortcuts */}
-//             <div className="bg-white rounded-3xl p-6 shadow-sm">
-//               <h4 className="font-serif text-lg mb-4">
-//                 Account shortcuts
-//               </h4>
-
-//               {[
-//                 ["Addresses", "/addresses"],
-//                 ["Settings", "/settings"],
-//                 ["Notifications", "/notifications"],
-//                 ["Payment methods", "#"],
-//               ].map(([label, href]) => (
-//                 <a
-//                   key={label}
-//                   href={href}
-//                   className="flex justify-between py-3 text-sm border-b border-[#f0eadf] last:border-0"
-//                 >
-//                   <span>{label}</span>
-//                   <span>→</span>
-//                 </a>
-//               ))}
-//             </div>
-
-//             {/* Security */}
-//             <div className="bg-white rounded-3xl p-6 shadow-sm">
-//               <h4 className="font-serif text-lg mb-2">Security</h4>
-//               <p className="text-sm text-[#8a8780] mb-4">
-//                 Two-factor authentication active.
-//               </p>
-//               <button className="w-full px-6 py-3 rounded-full border border-[#ddd6c9] hover:bg-white">
-//                 Manage security
-//               </button>
-//             </div>
-
-//             {/* Logout */}
-//             <button className="w-full px-6 py-3 rounded-full border border-red-200 text-red-700 hover:bg-red-50">
-//               Log out
-//             </button>
-//           </aside>
-//         </div>
-//       </main>
-//     </>
-//   )
-// }
-
-// export default page
 'use client'
 import React, { useState } from 'react';
 import {
@@ -234,6 +28,7 @@ import {
   Link as LinkIcon,
   User
 } from 'lucide-react';
+import Link from 'next/link';
 
 const page = () => {
   const [activeSection, setActiveSection] = useState('overview');
@@ -258,11 +53,8 @@ const page = () => {
     address: "742 Evergreen Terrace, Springfield, IL 62704",
     joinDate: "March 15, 2022",
     bio: "Product designer and creative director with over 8 years of experience in digital design. Passionate about creating intuitive user experiences.",
-    website: "https://alexmitchell.design",
-    company: "Mitchell Design Studio",
-    jobTitle: "Creative Director",
-    location: "San Francisco, CA",
-    timezone: "PST (UTC-8)"
+   
+  
   });
 
   const membershipLevel = "Platinum";
@@ -298,9 +90,9 @@ const page = () => {
       <header className="bg-white border-b border-slate-200 sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <button className="p-2 rounded-xl hover:bg-slate-100 transition-colors">
+            <Link href="/clients/home" className="p-2 rounded-xl hover:bg-slate-100 transition-colors">
               <ArrowLeft className="w-5 h-5 text-slate-600" />
-            </button>
+            </Link>
             <h1 className="text-lg font-semibold text-slate-900">Profile Settings</h1>
           </div>
           <div className="flex items-center gap-3">
@@ -338,11 +130,7 @@ const page = () => {
         {/* Cover Banner */}
         <div className="relative mb-24 sm:mb-28">
           <div className="h-48 sm:h-64 rounded-2xl overflow-hidden shadow-sm">
-            <img 
-              src={coverImage} 
-              alt="Cover" 
-              className="w-full h-full object-cover"
-            />
+           
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-2xl" />
           </div>
           
@@ -350,28 +138,14 @@ const page = () => {
           <div className="absolute -bottom-16 sm:-bottom-20 left-4 sm:left-8">
             <div className="relative">
               <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-2xl border-4 border-white shadow-lg overflow-hidden bg-white">
-                <img 
-                  src={avatarImage} 
-                  alt={profile.fullName} 
-                  className="w-full h-full object-cover"
-                />
+               
               </div>
-              <button className="absolute bottom-2 right-2 p-2 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow border border-slate-100">
-                <Camera className="w-4 h-4 text-slate-600" />
-              </button>
+             
             </div>
           </div>
 
           {/* Membership Badge */}
-          <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6">
-            <div className="flex items-center gap-2 px-4 py-2 bg-white/90 backdrop-blur-sm rounded-xl shadow-sm border border-white/20">
-              <Award className="w-5 h-5 text-amber-500" />
-              <div>
-                <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Membership</p>
-                <p className="text-sm font-bold text-slate-900">{membershipLevel}</p>
-              </div>
-            </div>
-          </div>
+          
         </div>
 
         {/* Profile Info Header */}
@@ -385,28 +159,9 @@ const page = () => {
                   {accountStatus}
                 </span>
               </div>
-              <p className="text-slate-500 flex items-center gap-2 flex-wrap">
-                <Briefcase className="w-4 h-4" />
-                {profile.jobTitle} at {profile.company}
-                <span className="hidden sm:inline text-slate-300">|</span>
-                <MapPin className="w-4 h-4 sm:ml-0" />
-                {profile.location}
-              </p>
+              
             </div>
-            <div className="flex items-center gap-2">
-              <a 
-                href={profile.website} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-xl text-sm font-medium text-slate-700 hover:bg-slate-50 hover:border-slate-300 transition-all shadow-sm"
-              >
-                <Globe className="w-4 h-4" />
-                Website
-              </a>
-              <button className="p-2 bg-white border border-slate-200 rounded-xl hover:bg-slate-50 hover:border-slate-300 transition-all shadow-sm">
-                <LinkIcon className="w-4 h-4 text-slate-600" />
-              </button>
-            </div>
+           
           </div>
         </div>
 
@@ -416,7 +171,7 @@ const page = () => {
             { id: 'overview', label: 'Overview' },
             { id: 'personal', label: 'Personal Info' },
             { id: 'security', label: 'Security' },
-            { id: 'notifications', label: 'Notifications' }
+           
           ].map((tab) => (
             <button
               key={tab.id}
@@ -453,7 +208,7 @@ const page = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
               {/* About Card */}
-              <div className="lg:col-span-2 bg-white rounded-2xl shadow-sm border border-slate-200 p-6">
+              <div className="lg:col-span-3 bg-white rounded-2xl shadow-sm border border-slate-200 p-6">
                 <h3 className="text-lg font-semibold text-slate-900 mb-4">About</h3>
                 <p className="text-slate-600 leading-relaxed">{profile.bio}</p>
                 
@@ -497,29 +252,7 @@ const page = () => {
                 </div>
               </div>
 
-              {/* Recent Activity */}
-              <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6">
-                <h3 className="text-lg font-semibold text-slate-900 mb-4">Recent Activity</h3>
-                <div className="space-y-5">
-                  {recentActivity.map((activity, idx) => {
-                    const Icon = activity.icon;
-                    return (
-                      <div key={idx} className="flex items-start gap-3">
-                        <div className={`w-8 h-8 rounded-lg ${activity.color} flex items-center justify-center flex-shrink-0`}>
-                          <Icon className="w-4 h-4 text-white" />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <p className="text-sm font-medium text-slate-900">{activity.action}</p>
-                          <p className="text-xs text-slate-500 mt-0.5">{activity.date}</p>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-                <button className="w-full mt-5 py-2.5 text-sm font-medium text-blue-600 hover:bg-blue-50 rounded-xl transition-colors">
-                  View All Activity
-                </button>
-              </div>
+            
             </div>
           </div>
         )}
@@ -584,59 +317,8 @@ const page = () => {
                 </div>
               </div>
 
-              <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">Company</label>
-                <div className="relative">
-                  <Briefcase className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
-                  <input
-                    type="text"
-                    value={profile.company}
-                    onChange={(e) => setProfile({...profile, company: e.target.value})}
-                    disabled={!editMode}
-                    className={`w-full pl-10 pr-4 py-2.5 rounded-xl border text-sm transition-all ${
-                      editMode 
-                        ? 'border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 bg-white' 
-                        : 'border-slate-200 bg-slate-50 text-slate-600'
-                    }`}
-                  />
-                </div>
-              </div>
+              
 
-              <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">Job Title</label>
-                <div className="relative">
-                  <Star className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
-                  <input
-                    type="text"
-                    value={profile.jobTitle}
-                    onChange={(e) => setProfile({...profile, jobTitle: e.target.value})}
-                    disabled={!editMode}
-                    className={`w-full pl-10 pr-4 py-2.5 rounded-xl border text-sm transition-all ${
-                      editMode 
-                        ? 'border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 bg-white' 
-                        : 'border-slate-200 bg-slate-50 text-slate-600'
-                    }`}
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">Website</label>
-                <div className="relative">
-                  <Globe className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
-                  <input
-                    type="url"
-                    value={profile.website}
-                    onChange={(e) => setProfile({...profile, website: e.target.value})}
-                    disabled={!editMode}
-                    className={`w-full pl-10 pr-4 py-2.5 rounded-xl border text-sm transition-all ${
-                      editMode 
-                        ? 'border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 bg-white' 
-                        : 'border-slate-200 bg-slate-50 text-slate-600'
-                    }`}
-                  />
-                </div>
-              </div>
 
               <div className="sm:col-span-2">
                 <label className="block text-sm font-medium text-slate-700 mb-2">Address</label>
@@ -760,60 +442,8 @@ const page = () => {
               </div>
             </div>
 
-            {/* Two-Factor Authentication */}
-            <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <div className="p-2 bg-violet-50 rounded-xl">
-                    <Shield className="w-5 h-5 text-violet-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-slate-900">Two-Factor Authentication</h3>
-                    <p className="text-sm text-slate-500">Add an extra layer of security to your account</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-50 text-emerald-700 rounded-full text-xs font-semibold border border-emerald-100">
-                    <CheckCircle2 className="w-3.5 h-3.5" />
-                    Enabled
-                  </span>
-                  <button className="text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors">
-                    Configure
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            {/* Login Sessions */}
-            <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
-              <h3 className="text-lg font-semibold text-slate-900 mb-4">Active Sessions</h3>
-              <div className="space-y-4">
-                {[
-                  { device: "Chrome on MacOS", location: "San Francisco, CA", time: "Current session", current: true },
-                  { device: "Safari on iPhone", location: "San Francisco, CA", time: "2 hours ago", current: false },
-                  { device: "Firefox on Windows", location: "New York, NY", time: "3 days ago", current: false }
-                ].map((session, idx) => (
-                  <div key={idx} className="flex items-center justify-between p-4 rounded-xl border border-slate-100 hover:bg-slate-50 transition-colors">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-slate-100 rounded-lg flex items-center justify-center">
-                        <Globe className="w-5 h-5 text-slate-500" />
-                      </div>
-                      <div>
-                        <p className="text-sm font-medium text-slate-900">{session.device}</p>
-                        <p className="text-xs text-slate-500">{session.location} · {session.time}</p>
-                      </div>
-                    </div>
-                    {session.current ? (
-                      <span className="text-xs font-medium text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full">Active</span>
-                    ) : (
-                      <button className="text-xs font-medium text-red-600 hover:bg-red-50 px-2.5 py-1 rounded-full transition-colors">
-                        Revoke
-                      </button>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
+         
+          
           </div>
         )}
 

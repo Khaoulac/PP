@@ -11,7 +11,18 @@ const page = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
        
-      
+        <video
+                src="/videos/hero.mp4"
+                poster="/images/hero1.jpeg"
+                autoPlay
+                muted
+                loop
+                playsInline
+                  className="w-full h-full object-cover rounded-2xl"
+                // className="w-full h-48 md:h-64 object-cover rounded-3xl"
+              >
+                Your browser does not support the video tag.
+              </video>
         </div>
     
 

@@ -27,12 +27,12 @@ class AuthController extends Controller
             'password' => Hash::make($request->input('password')),
         ]);
 
-        $token = bin2hex(random_bytes(16));
+        // $token = bin2hex(random_bytes(16));
 
         return response()->json([
             'message' => 'User created successfully',
             'user' => $user,
-            'token' => $token,
+            // 'token' => $token,
         ], 201);
     }
 
@@ -53,12 +53,12 @@ class AuthController extends Controller
             return response()->json(['message' => 'Invalid credentials'], 401);
         }
 
-        $token = bin2hex(random_bytes(16));
+        // $token = bin2hex(random_bytes(16));
 
         return response()->json([
             'message' => 'Login successful',
             'user' => $user,
-            'token' => $token,
+            // 'token' => $token,
         ]);
     }
 }

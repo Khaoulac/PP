@@ -153,6 +153,7 @@ const page = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 p-4 md:p-6 lg:p-8">
+      
       <div className="max-w-6xl mx-auto space-y-6">
         {/* Top Navigation */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">

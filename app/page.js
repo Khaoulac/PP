@@ -1,10 +1,9 @@
 'use client'
 import Link from 'next/link'
 import React from 'react'
-import Image from "next/image";
 import { useEffect } from 'react';
+import AboutSection from './components/aboutSection'
 
-// import Footer from '@/components/footer'
 import Navbar from './components/navbar'
 import Footer from './components/footer'
 import ScrollItems from './components/scrollItems';
@@ -37,12 +36,19 @@ const page = () => {
    
       {/* Background Image */}
       <div className="absolute inset-0">
-       <img
-        src="image source"
-        className="img-fluid rounded-top"
-        alt=""
-       />
-             
+     
+             <video
+                src="/videos/hero.mp4"
+                poster="/images/hero1.jpeg"
+                autoPlay
+                muted
+                loop
+                playsInline
+                  className="w-full h-full object-cover rounded-2xl"
+                // className="w-full h-48 md:h-64 object-cover rounded-3xl"
+              >
+                Your browser does not support the video tag.
+              </video>
         </div>
     
 
@@ -79,7 +85,10 @@ const page = () => {
             </div>
 
             {/* Video Card */}
-                   </div>
+            <div className="max-w-sm rounded-3xl overflow-hidden">
+              
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -88,56 +97,16 @@ const page = () => {
      
 
       <div className='flex flex-wrap gap-5 items-center justify-center '>
-      <ScrollItems/> 
-      
+     
+     < ScrollItems/>
 
       </div>
         
      
         </section> 
        {/*this is the aboute section made by khaoula */}
-       <section id="about" className="py-24 md:py-32 px-6 ">
-  <div className="mx-auto max-w-7xl">
-    <div className="flex items-center gap-4 text-black text-sm uppercase tracking-[0.25em] mb-6">
-      <span className="font-display text-2xl ">About us</span>
-     
-    </div>
-    <div className="grid md:grid-cols-2 gap-12 items-end">
-      <p className="text-black text-lg max-w-md">
-        Let's create a space that's not just beautiful — but beautifully yours.
-      </p>
-      <h2 className="font-display text-4xl md:text-6xl leading-[1.05] ">
-        Design with purpose.<br/><em className="not-italic text-black">style with heart.</em>
-      </h2>
-    </div>
-    <p className="mt-10 max-w-2xl text-black/80">
-      At Luzen, we believe that great design goes beyond aesthetics — it should tell your story, support your lifestyle, and inspire daily living.
-    </p>
-   
-    <div className="   mt-16 grid md:grid-cols-2 gap-8  ">
-      <figure className="group ">
-        <div className='flex justify-center items-center'>
-        <div id='box' className=" box aspect-[4/5] overflow-hidden rounded-3xl bg-sand">
-          <img src="/images/img2.jpeg" alt="" loading='lazy' className="w-full h-full object-cover group-hover:scale-105 transition duration-700"/>
-        </div>
-        </div>
-        <figcaption className="mt-4 flex justify-between text-sm text-black uppercase tracking-widest">
-          <span>Luzen's 001</span><span>—</span>
-        </figcaption>
-      </figure>
-      <figure className="group md:mt-24">
-          <div className='flex justify-center items-center'>
-        <div id='box' className=" box aspect-[4/5] overflow-hidden rounded-3xl bg-sand">
-          <img src="/images/img1.jpeg" alt="" className="w-full h-full object-cover group-hover:scale-105 transition duration-700"/>
-        </div>
-        </div>
-        <figcaption className="mt-4 flex justify-between text-sm text-black uppercase tracking-widest">
-          <span>Luzen's 002</span><span>—</span>
-        </figcaption>
-      </figure>
-    </div>  
-  </div>
-</section>
+       
+  <AboutSection/>
        {/*this is the services section made by youssef */}
     <section id="events" className="py-24 md:py-32 px-6 bg-sand">
   <div className="mx-auto max-w-7xl">
