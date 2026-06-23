@@ -1,12 +1,27 @@
 import React from 'react'
-import Navbar from '../../components/navbar'
 import Card from '../../components/product'
 import Footer from '../../components/footer'
 import NavbarClients from '@/app/components/navbarClients'
-const page = () => {
+
+const API_BASE = process.env.NEXT_PUBLIC_API_BASE || 'http://127.0.0.1:8000'
+
+const page = async () => {
+  const res = await fetch(`${API_BASE}/api/products`, { cache: 'no-store' })
+  let products = []
+  try {
+    if (!res.ok) {
+      const t = await res.text().catch(() => '')
+      throw new Error(`Failed to fetch products (${res.status}) ${t}`)
+    }
+    const data = await res.json()
+    products = Array.isArray(data) ? data : (data ? [data] : [])
+  } catch (err) {
+    console.error('Products page fetch error', err)
+  }
+
   return (
     <>
-    <NavbarClients/>
+      <NavbarClients/>
    <section className="hero relative min-h-screen overflow-hidden " id=''>
    
       {/* Background Image */}
@@ -103,17 +118,11 @@ const page = () => {
       </div>
 
       <div className='flex flex-wrap gap-5 items-center justify-center '>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
+        {products.length > 0 ? (
+          products.map((p) => <Card key={p.id ?? p.slug ?? Math.random()} product={p} />)
+        ) : (
+          <div className="text-center w-full py-12 text-gray-500">No products available</div>
+        )}
       </div>
         
      

@@ -104,9 +104,10 @@ const page = () => {
         
      
         </section> 
-       {/*this is the aboute section made by khaoula */}
+       {/*this is the about section made by khaoula */}
        
   <AboutSection/>
+     
        {/*this is the services section made by youssef */}
     <section id="events" className="py-24 md:py-32 px-6 bg-sand">
   <div className="mx-auto max-w-7xl">
@@ -114,7 +115,8 @@ const page = () => {
       <span className="font-display text-2xl ">04</span>
       <span>Services</span>
     </div>
-    <h2 className="font-display text-4xl md:text-6xl max-w-3xl leading-[1.05] ">
+    < ScrollItems/>
+    <h2 className="font-display text-4xl md:text-6xl max-w-3xl leading-[1.05]  text-black">
       Discover our recent events and achievements.
     </h2>
     <p className="mt-6 text-black/70 max-w-xl">
@@ -124,13 +126,13 @@ const page = () => {
     <div className="mt-16 grid md:grid-cols-3 gap-6">
       <div className='flex justify-center '>
       <div id='box' className="box md:row-span-2  aspect-3/4 md:aspect-auto rounded-3xl overflow-hidden">
-        <img src="https://cdn.prod.website-files.com/68de9f894df3c35c556330f6/68e5405301886a216066c589_event-main-img.avif" className="w-full h-full object-cover"/>
+        <img src="images/ph111.png"/>
       </div>
       </div>
       <div className="md:col-span-2 grid sm:grid-cols-2 gap-6">
         <article id='box' className="  bg-black rounded-3xl overflow-hidden">
           <div className='flex justify-center items-center'>
-          <img src="https://cdn.prod.website-files.com/68de9f894df3c35c556330f6/68e547017e3a4ee99da4637a_event-01.avif" className="w-full aspect-4/3 object-cover"/>
+          <img src="https://i.pinimg.com/1200x/44/d7/a6/44d7a6c31875f315d618f964f453e200.jpg" className="w-full aspect-4/3 object-cover"/>
           </div>
           <div className="p-6">
             <div className="text-black text-xs uppercase tracking-widest">01 · Sep 15, 2024</div>

@@ -309,16 +309,7 @@ const page = () => {
                     
                     <Reveal delay="reveal-delay-1">
                       <p className="text-[#8A7E72] text-lg leading-relaxed max-w-md">
-                        Cera is a handcrafted ceramics studio specializing in custom creations. We transform ideas into unique ceramic pieces, blending creativity, quality, and craftsmanship to create something truly personal.
-                      </p>
-                    </Reveal>
-                    
-                    <Reveal delay="reveal-delay-2">
-                      <div className="glass-card p-6 max-w-lg">
-                        <p className="text-[#3D3228] leading-relaxed text-[0.95rem]">
-                          At Cera, we transform creativity into handcrafted ceramic art. From personalized mugs and custom designs to interactive studio workshops, we offer unique experiences that bring ideas to life. Whether you're looking for a one-of-a-kind piece or want to create your own, Cera is a place where imagination meets craftsmanship.
-                        </p>
-                      </div>
+                       Cera is a handcrafted ceramics studio specializing in custom creations. We transform ideas into unique ceramic pieces, combining creativity, quality, and craftsmanship. From personalized mugs and custom designs to interactive studio workshops, we offer unique experiences that bring artistic visions to life. Whether you're looking for a one-of-a-kind creation or want to craft your own, Cera is where creativity meets handmade excellence. </p>
                     </Reveal>
                     
                     {/* Feature Icons Row */}
@@ -346,7 +337,7 @@ const page = () => {
                   <Reveal delay="reveal-delay-2" direction="right">
                     <div className="img-organic shadow-2xl relative">
                       <img 
-                        src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=800&h=900&fit=crop" 
+                        src="/images/image.png" 
                         alt="Cera ceramics studio with handcrafted pottery mug" 
                         className="w-full h-125 lg:h-150 object-cover"
                       />
@@ -398,21 +389,20 @@ const page = () => {
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
                     {[
                       {
-                        img: 'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=600&h=400&fit=crop',
-                        alt: 'Handcrafted ceramic mugs collection',
+                        img: '/images/ph1.png',
                         title: 'Signature Mugs',
                         badge: 'Bestseller',
                         desc: 'Hand-thrown mugs with unique glazes. Each piece carries the warmth of the artisan\'s touch.'
                       },
                       {
-                        img: 'https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=600&h=400&fit=crop',
+                        img: '/images/ph2.png',
                         alt: 'Artistic ceramic vases',
                         title: 'Artisan Vases',
                         badge: 'New',
                         desc: 'Sculptural vases that blend form and function. Perfect for dried flowers or as standalone art.'
                       },
                       {
-                        img: 'https://images.unsplash.com/photo-1605883705077-8d3d3cebe78c?w=600&h=400&fit=crop',
+                        img: '/images/ph3.png',
                         alt: 'Handmade ceramic bowls',
                         title: 'Serving Bowls',
                         badge: 'Classic',
@@ -486,7 +476,7 @@ const page = () => {
                   <Reveal direction="left">
                     <div className="img-organic-2 shadow-2xl relative">
                       <img 
-                        src="https://images.unsplash.com/photo-1493106641515-6b5631de4bb9?w=800&h=700&fit=crop" 
+                        src="https://i.pinimg.com/736x/a5/4e/71/a54e716fb460a230187ef80f4d24ea04.jpg" 
                         alt="Pottery workshop hands on clay" 
                         className="w-full h-[450px] lg:h-[550px] object-cover"
                       />
@@ -519,10 +509,10 @@ const page = () => {
                     <Reveal delay="reveal-delay-2">
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {[
-                          { icon: <MailIcon />, title: 'Email', info: 'hello@cerastudio.com' },
-                          { icon: <PhoneIcon />, title: 'Phone', info: '+1 (555) 234-5678' },
-                          { icon: <MapPinIcon />, title: 'Location', info: '42 Artisan Lane, Portland' },
-                          { icon: <ClockIcon />, title: 'Hours', info: 'Tue–Sun, 10am–6pm' },
+                          { icon: <MailIcon />, title: 'Email', info: 'cerastudio@gmail.com' },
+                          { icon: <PhoneIcon />, title: 'Phone', info: '+212 710995045' },
+                          { icon: <MapPinIcon />, title: 'Location', info: '42 Artisan Lane, Marrakech' },
+                          { icon: <ClockIcon />, title: 'Hours', info: 'Tue–Sun, 10am–9pm' },
                         ].map((contact, i) => (
                           <div key={i} className="glass-card p-5 flex items-start gap-4 hover:bg-[#E8E0D5]/30 transition-all cursor-pointer group">
                             <div className="w-10 h-10 rounded-xl bg-[#E8E0D5]/60 flex items-center justify-center text-[#B8916A] group-hover:scale-110 transition-transform">
@@ -544,13 +534,13 @@ const page = () => {
                           Book a Workshop
                           <ArrowRightIcon />
                         </button>
-                        <button className="btn-outline flex items-center gap-3 justify-center">
+                        {/* <button className="btn-outline flex items-center gap-3 justify-center">
                           <DownloadIcon />
                           Download Catalog
-                        </button>
+                        </button> */}
                       </div>
                     </Reveal>
-                    
+                  
                     {/* Social Links */}
                     <Reveal delay="reveal-delay-4">
                       <div className="flex items-center gap-4 pt-4">

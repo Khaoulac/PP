@@ -3,10 +3,35 @@ import Navbar from '../../components/navbar'
 import Card from '../../components/product'
 import Footer from '../../components/footer'
 import Link from 'next/link'
-const page = () => {
+
+async function fetchProducts() {
+  try {
+    const res = await fetch('http://127.0.0.1:8000/api/products', { cache: 'no-store' })
+    if (!res.ok) {
+      const text = await res.text().catch(() => '')
+      const msg = `Failed to fetch (${res.status}) ${text}`
+      throw new Error(msg)
+    }
+    const data = await res.json()
+    return Array.isArray(data) ? data : [data]
+  } catch (err) {
+    console.error('fetchProducts error', err)
+    throw err
+  }
+}
+
+const page = async () => {
+  let products = []
+  let fetchError = null
+  try {
+    products = await fetchProducts()
+  } catch (err) {
+    fetchError = err?.message || String(err)
+  }
+
   return (
     <>
-    <Navbar/>
+      <Navbar/>
    <section className="hero relative min-h-screen overflow-hidden " id=''>
    
       {/* Background Image */}
@@ -98,17 +123,19 @@ const page = () => {
       </div>
 
       <div className='flex flex-wrap gap-5 items-center justify-center '>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
+        {fetchError ? (
+          <div className="p-6 bg-red-50 text-red-700 rounded-md">
+            <strong>Error loading products:</strong>
+            <div className="mt-2">{fetchError}</div>
+            <div className="mt-2 text-sm text-gray-500">Check backend server and run: <code>php artisan serve --host=127.0.0.1 --port=8000</code></div>
+          </div>
+        ) : products.length === 0 ? (
+          <p className="text-gray-500">No products found.</p>
+        ) : (
+          products.map((p) => (
+            <Card product={p} key={p.id ?? p.slug ?? JSON.stringify(p)} />
+          ))
+        )}
       </div>
         
      

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   ShoppingBag,
   Trash2,
@@ -16,51 +16,26 @@ import {
   AlertCircle,
 } from "lucide-react";
 import NavbarClients from "@/app/components/navbarClients";
+import { getCart, setCart } from '@/app/lib/cartClient'
 const page = () => {
   const [couponCode, setCouponCode] = useState("");
   const [appliedCoupon, setAppliedCoupon] = useState(null);
   const [couponError, setCouponError] = useState("");
-  const [cartItems, setCartItems] = useState([
-    {
-      id: 1,
-      name: "Wireless Headphones Pro",
-      description: "Active Noise Cancellation, 30h Battery",
-      sku: "WHP-2026-BLK",
-      price: 149.99,
-      originalPrice: 199.99,
-      quantity: 1,
-      image:
-        "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=200&h=200&fit=crop",
-      stock: 15,
-      maxPerOrder: 5,
-    },
-    {
-      id: 2,
-      name: "USB-C Cable (6ft, 2-Pack)",
-      description: "Braided Nylon, 100W Fast Charging",
-      sku: "USBC-6FT-2PK-WHT",
-      price: 19.99,
-      originalPrice: 24.99,
-      quantity: 2,
-      image:
-        "https://images.unsplash.com/photo-1625153669622-870ee005b33d?w=200&h=200&fit=crop",
-      stock: 48,
-      maxPerOrder: 10,
-    },
-    {
-      id: 3,
-      name: "Smart Watch Series 5",
-      description: "GPS, Heart Rate, Always-On Display",
-      sku: "SWS5-44MM-BLU",
-      price: 349.99,
-      originalPrice: 399.99,
-      quantity: 1,
-      image:
-        "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=200&h=200&fit=crop",
-      stock: 8,
-      maxPerOrder: 5,
-    },
-  ]);
+  const [cartItems, setCartItems] = useState([])
+
+  useEffect(() => {
+    let mounted = true
+    getCart().then((c) => {
+      if (!mounted) return
+      setCartItems(Array.isArray(c) ? c : [])
+    }).catch((err) => console.error('getCart error', err))
+    return () => { mounted = false }
+  }, [])
+
+  // persist cart on changes
+  useEffect(() => {
+    setCart(cartItems).catch((err) => console.error('setCart error', err))
+  }, [cartItems])
 
   const updateQuantity = (id, delta) => {
     setCartItems((prev) =>
